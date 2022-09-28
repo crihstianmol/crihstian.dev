@@ -37,7 +37,7 @@ function Hobbies({ topSongs, song }) {
                             <p>También suelo escuchar música, creo es lo que más hago en mi día a día.</p>
                             <p>🎧&nbsp;&nbsp;Ahora mismo estoy escuchando...</p>
                             {
-                                !song.is_playing ? (
+                                !song?.is_playing ? (
                                     <>
                                         <div className='song-listing'>
                                             <a className='song-listing-a' title="Perfil de Spotify" aria-label="Perfil de Spotify" href="https://open.spotify.com/user/7we4a4d6uxjzfas54y1vp35bb?si=55a9071e60c2466f" rel='noreferrer' target='_blank'>
@@ -118,7 +118,7 @@ function Hobbies({ topSongs, song }) {
                             <p>I also listen to music, I think that's what I do most in my day to day life.</p>
                             <p>🎧&nbsp;&nbsp;Right now I'm listening to...</p>
                             {
-                                 !song.is_playing  ? (
+                                 !song?.is_playing  ? (
                                     <>
                                         <div className='song-listing'>
                                             <a className='song-listing-a' title="Spotify Profile" aria-label="Spotify Profile" href="https://open.spotify.com/user/7we4a4d6uxjzfas54y1vp35bb?si=55a9071e60c2466f" rel='noreferrer' target='_blank'>
