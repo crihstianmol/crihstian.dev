@@ -1,5 +1,5 @@
 import NavRouter from "../components/NavRouter";
-import About from "../components/About";
+import Index from "../components/Index";
 import Skills from "../components/Skills";
 import { useState, useEffect } from 'react';
 
@@ -21,7 +21,7 @@ const index = () => {
     return (
         <>
             <NavRouter headerprops={indexHeaderProps}>
-                <About />
+                <Index />
                 <Skills />
             </NavRouter>
         </>

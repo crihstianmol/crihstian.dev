@@ -3,6 +3,7 @@ import Code from 'react-code-prettify';
 import { makeid } from '../modules/Misc';
 import { useRouter } from 'next/router';
 function BlogViewer({ BlogPost, blog, blogError }) {
+    console.log(BlogPost)
     const nxRouter = useRouter();
     const [pageLang, setPageLan] = useState('EN')
     const [BackToBlog, setBackToBlog] = useState(false)

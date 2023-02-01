@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 function NavRouter({ children, headerprops = null }) {
     const nxRouter = useRouter();
     const headerdefaults = {
+        page: "Index",
         title: "Crihstian Molina",
         description: "Hello, my name is Crihstian Molina, I'm Software Developer with more than two years of experience in the field, and this is my website.",
         image: "https://crihstianmol.dev/static/images/banner-min.png"
@@ -83,16 +84,48 @@ function NavRouter({ children, headerprops = null }) {
                     <header>
                         <nav className="nav-bar">
                             <div className="nav">
-                                <label className="logo">
-                                    <a onClick={() => { changeRoute("/") }} _href="/"><span className="logo-a"><span className="emoji" role="img" ><img width="19" height="19" alt="url" src="../static/images/logos/favicon.png"></img></span> </span></a>
-                                    <a onClick={() => { changeRoute("/") }} _href="/"><span className="logo-a"><span className="ml">Crihstian Molina</span></span></a>
-                                </label>
-                                <input type="checkbox" checked={check} onChange={changeCheckStatus} id="btnMenu" className="nav-btn" />
                                 <div className="links">
-                                    <a onClick={() => { changeRoute("/blog") }} _href="/blog"><span className="emoji" role="img" ><img width="19" height="19" alt="url" src="../static/images/logos/blog.png"></img></span> Blog</a>
-                                    <a onClick={() => { changeRoute("/curriculum") }} _href="/curriculum"><span className="emoji" role="img" ><img width="19" height="19" alt="url" src="../static/images/logos/curriculum.png"></img></span> Curriculum</a>
-                                    <a onClick={() => { changeRoute("/contact") }} _href="/contact"><span className="emoji" role="img" ><img width="19" height="19" alt="url" src="../static/images/logos/phone.png"></img></span> Contacto</a>
+                                    {
+                                        headerprops.page == "Index" ? (
+                                            <>
+                                                <a onClick={() => { changeRoute("/blog") }} _href="/blog">Blog</a>
+                                                <a onClick={() => { changeRoute("/about") }} _href="/about">Sobre mi</a>
+                                                <a onClick={() => { changeRoute("/contact") }} _href="/contact">Contacto</a>
+                                            </>
+                                        ) : (
+                                            headerprops.page == "Blog" ? (
+                                                <>
+                                                    <a onClick={() => { changeRoute("/") }} _href="/">Home</a>
+                                                    <a onClick={() => { changeRoute("/about") }} _href="/about">Sobre mi</a>
+                                                    <a onClick={() => { changeRoute("/contact") }} _href="/contact">Contacto</a>
+                                                </>
+                                            ) : (
+                                                headerprops.page == "About" ? (
+                                                    <>
+                                                        <a onClick={() => { changeRoute("/") }} _href="/">Home</a>
+                                                        <a onClick={() => { changeRoute("/blog") }} _href="/blog">Blog</a>
+                                                        <a onClick={() => { changeRoute("/contact") }} _href="/contact">Contacto</a>
+                                                    </>
+                                                ) : (
+                                                    headerprops.page == "Contact" ? (
+                                                        <>
+                                                            <a onClick={() => { changeRoute("/") }} _href="/">Home</a>
+                                                            <a onClick={() => { changeRoute("/blog") }} _href="/blog">Blog</a>
+                                                            <a onClick={() => { changeRoute("/about") }} _href="/about">Sobre mi</a>
+                                                        </>
+                                                    ) : (
+                                                        <>
+                                                            <a onClick={() => { changeRoute("/blog") }} _href="/blog">Blog</a>
+                                                            <a onClick={() => { changeRoute("/about") }} _href="/about">Sobre mi</a>
+                                                            <a onClick={() => { changeRoute("/contact") }} _href="/contact">Contacto</a>
+                                                        </>
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    }
                                 </div>
+                                <input type="checkbox" checked={check} onChange={changeCheckStatus} id="btnMenu" className="nav-btn" />
                                 <div className='nav-buttons-container'>
                                     <span className="emoji" role="img" onClick={switchTheme}>
                                         <img alt="theme" width="19" height="19" src={buttonTheme}></img>
@@ -117,16 +150,48 @@ function NavRouter({ children, headerprops = null }) {
                     <header>
                         <nav className="nav-bar">
                             <div className="nav">
-                                <label className="logo">
-                                    <a onClick={() => { changeRoute("/") }} _href="/"><span className="logo-a"><span className="emoji" role="img" ><img width="19" height="19" alt="url" src="../static/images/logos/favicon.png"></img></span> </span></a>
-                                    <a onClick={() => { changeRoute("/") }} _href="/"><span className="logo-a"><span className="ml">Crihstian Molina</span></span></a>
-                                </label>
-                                <input type="checkbox" checked={check} onChange={changeCheckStatus} id="btnMenu" className="nav-btn" />
                                 <div className="links">
-                                    <a onClick={() => { changeRoute("/blog") }} _href="/blog"><span className="emoji" role="img" ><img width="19" height="19" alt="url" src="../static/images/logos/blog.png"></img></span> Blog</a>
-                                    <a onClick={() => { changeRoute("/curriculum") }} _href="/curriculum"><span className="emoji" role="img" ><img width="19" height="19" alt="url" src="../static/images/logos/curriculum.png"></img></span> Curriculum</a>
-                                    <a onClick={() => { changeRoute("/contact") }} _href="/contact"><span className="emoji" role="img" ><img width="19" height="19" alt="url" src="../static/images/logos/phone.png"></img></span> Contact</a>
+                                {
+                                        headerprops.page == "Index" ? (
+                                            <>
+                                                <a onClick={() => { changeRoute("/blog") }} _href="/blog">Blog</a>
+                                                <a onClick={() => { changeRoute("/about") }} _href="/about">About me</a>
+                                                <a onClick={() => { changeRoute("/contact") }} _href="/contact">Contact</a>
+                                            </>
+                                        ) : (
+                                            headerprops.page == "Blog" ? (
+                                                <>
+                                                    <a onClick={() => { changeRoute("/") }} _href="/">Home</a>
+                                                    <a onClick={() => { changeRoute("/about") }} _href="/about">About me</a>
+                                                    <a onClick={() => { changeRoute("/contact") }} _href="/contact">Contact</a>
+                                                </>
+                                            ) : (
+                                                headerprops.page == "About" ? (
+                                                    <>
+                                                        <a onClick={() => { changeRoute("/") }} _href="/">Home</a>
+                                                        <a onClick={() => { changeRoute("/blog") }} _href="/blog">Blog</a>
+                                                        <a onClick={() => { changeRoute("/contact") }} _href="/contact">Contact</a>
+                                                    </>
+                                                ) : (
+                                                    headerprops.page == "Contact" ? (
+                                                        <>
+                                                            <a onClick={() => { changeRoute("/") }} _href="/">Home</a>
+                                                            <a onClick={() => { changeRoute("/blog") }} _href="/blog">Blog</a>
+                                                            <a onClick={() => { changeRoute("/about") }} _href="/about">About me</a>
+                                                        </>
+                                                    ) : (
+                                                        <>
+                                                            <a onClick={() => { changeRoute("/blog") }} _href="/blog">Blog</a>
+                                                            <a onClick={() => { changeRoute("/about") }} _href="/about">About me</a>
+                                                            <a onClick={() => { changeRoute("/contact") }} _href="/contact">Contact</a>
+                                                        </>
+                                                    )
+                                                )
+                                            )
+                                        )
+                                    }
                                 </div>
+                                <input type="checkbox" checked={check} onChange={changeCheckStatus} id="btnMenu" className="nav-btn" />
                                 <div className='nav-buttons-container'>
                                     <span className="emoji" role="img" onClick={switchTheme}>
                                         <img alt="theme" width="19" height="19" src={buttonTheme}></img>
@@ -157,21 +222,11 @@ function NavRouter({ children, headerprops = null }) {
             {
                 pageLang === 'ES' ? (
                     <div className="footer mt">
-                        <div className="footer-links-container" >
-                            <div className="footer-links">
-                                <a onClick={() => { changeRoute("/hobbies") }} _href="/hobbies"><span className="emoji" role="img" ><img width="19" height="19" alt="url" src="../static/images/logos/hobbies.png"></img></span> Hobbies</a>
-                                <a href='https://www.paypal.com/donate/?hosted_button_id=WMJ939EWKVBVC' target='_blank' rel='noreferrer' ><span className="emoji" role="img" ><img width="19" height="19" alt="url" src="../static/images/logos/buy-coffe.png"></img></span> Donar</a>
-                            </div>
-                        </div>
+                        <p style={{ "textAlign": "center" }}>Crihstian Molina © {new Date().getFullYear()}</p>
                     </div>
                 ) : (
                     <div className="footer mt">
-                        <div className="footer-links-container" >
-                            <div className="footer-links">
-                                <a onClick={() => { changeRoute("/hobbies") }} _href="/hobbies"><span className="emoji" role="img" ><img width="19" height="19" alt="url" src="../static/images/logos/hobbies.png"></img></span> Hobbies</a>
-                                <a href='https://www.paypal.com/donate/?hosted_button_id=WMJ939EWKVBVC' target='_blank' rel='noreferrer' ><span className="emoji" role="img" ><img width="19" height="19" alt="url" src="../static/images/logos/buy-coffe.png"></img></span> Donate</a>
-                            </div>
-                        </div>
+                        <p style={{ "textAlign": "center" }}>Crihstian Molina © {new Date().getFullYear()}</p>
                     </div>
                 )
             }

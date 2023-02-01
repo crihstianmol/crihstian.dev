@@ -18,7 +18,7 @@ function Contact() {
                     <section className="contact">
                         <div className="contact-social">
                             <h3>Contacto</h3>
-                            <p>Si quieres contactarme o saber más de mi, puedes encontrarme aquí.</p>
+                            <p>Si quieres contactarme o saber más de mi, puedes encontrarme en.</p>
                             <div className="contact-social-list">
                                 <span className="contact-social-item">
                                     <a href="https://platzi.com/p/crihstianmol" target="_blank" rel="noreferrer" >
@@ -51,14 +51,13 @@ function Contact() {
                                     </a>
                                 </span>
                             </div>
-                            <p>Mis DM's en Twitter están abiertos, si quieres trabajar conmigo, contactame en LinkedIn o en Twitter.</p>
                         </div>
                     </section>
                 ) : (
                     <section className="contact">
                         <div className="contact-social">
                             <h3>Contact</h3>
-                            <p>If you want to contact me or know more about me you can find me here.</p>
+                            <p>If you want to contact me or know more about me you can find me in.</p>
                             <div className="contact-social-list">
                                 <span className="contact-social-item">
                                     <a href="https://platzi.com/p/crihstianmol" target="_blank" rel="noreferrer" >
@@ -91,7 +90,6 @@ function Contact() {
                                     </a>
                                 </span>
                             </div>
-                            <p>My DM's on Twitter are open, if you want to work with me, contact me on LinkedIn or Twitter.</p>
                         </div>
                     </section>
                 )

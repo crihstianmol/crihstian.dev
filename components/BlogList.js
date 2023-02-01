@@ -31,12 +31,11 @@ function BlogList({ blogs }) {
                     <div key={makeid(50)} className='load-circle'></div>
                 </div>
                 <div key={makeid(50)} className='load-percent' style={{ display: isSearched ? 'none' : 'block' }}>
-                    <h3 key={makeid(50)}>{pageLang === "ES" ? (<>Cargando Blog</>) : (<>Loading Blog</>)}</h3>
+                    <h1 key={makeid(50)}>{pageLang === "ES" ? (<>Cargando Blog</>) : (<>Loading Blog</>)}</h1>
                 </div>
                 {pageLang === "ES" ? (<>
                     <section key={makeid(50)} style={{ display: isSearched ? 'block' : 'none' }} className="blogposts">
                         <h3 key={makeid(50)}>Blog</h3>
-                        <p key={makeid(50)}>Durante mi tiempo libre, cuando tengo ideas en mi cabeza, me sirve muchísimo escribir, cuando son buenas ideas y logro organizarlas, las comparto. Resumidamente eso es mi blog, bienvenido.</p>
                         <section key={makeid(50)} className="blogs-container">
                             {
                                 blogs.map((value) => {
@@ -58,7 +57,6 @@ function BlogList({ blogs }) {
                 </>) : (<>
                     <section key={makeid(50)} style={{ display: isSearched ? 'block' : 'none' }} className="blogposts">
                         <h3 key={makeid(50)}>Blog</h3>
-                        <p key={makeid(50)}>During my free time, when I have ideas in my head, I find it very useful to write, when they are good ideas and I manage to organise them, I share them, most post are wrote in spanish. That's my blog in a nutshell, welcome.</p>
                         <section key={makeid(50)} className="blogs-container">
                             {
                                 blogs.map((value) => {

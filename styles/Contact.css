@@ -27,19 +27,12 @@
 
 .contact {
   width: 600px;
-  margin: 0 auto 0;
-}
-
-.contact-social {
-  margin: 20% 0px;
-  text-align: center;
-  justify-content: center;
+  padding: 1rem;
 }
 
 .contact-social-list {
   display: flex;
   flex-direction: row;
-  justify-content: center;
 }
 
 .contact-social-item {
@@ -58,7 +51,5 @@
 
   .contact-social {
     padding: 1rem;
-    text-align: center;
-    justify-content: center;
   }
 }

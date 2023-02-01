@@ -14,6 +14,7 @@ const contact = () => {
     }, []);
 
     const contactHeaderProps = {
+        page:"Contact",
         title: "Contact",
         description: pageLang == 'ES' ? 'Aquí podrás encontrar mi información de contacto.' : 'Here you can find my contact information.',
         image: '../static/images/contact-img.jpg'
