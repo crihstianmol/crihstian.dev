@@ -19,7 +19,7 @@ function BlogViewer({ BlogPost, blog, blogError }) {
         const underline = element.annotations.underline ? React.createElement("u",{},element.text ) : element.text;
         const italic = element.annotations.italic? React.createElement("i",{},underline ) : underline;
         const bold = element.annotations.bold? React.createElement("strong",{},italic ): italic;
-        return element.hasurl? React.createElement("strong",{className:"special-text",key:makeid(6), href:element.url,target:"_blank", rel: "noreferrer" },bold ) : bold;
+        return element.hasurl? React.createElement("a",{className:"special-text",key:makeid(6), href:element.url,target:"_blank", rel: "noreferrer" },bold ) : bold;
      }
     const comeBackToBlogs = () => {
         setBackToBlog(true)
