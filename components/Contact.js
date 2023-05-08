@@ -51,6 +51,18 @@ function Contact() {
                                     </a>
                                 </span>
                             </div>
+                            <p>También, si lo necesitas, puedes ver mi CV aquí.</p>
+                            <section className='certs-container '>
+                                <div className='cert' title='CV'>
+                                    <a href='./static/cv/cv.pdf' rel='noreferrer' target='_blank' title='CV'>
+                                        <img src='./static/images/cv/cv.png' alt='CV' >
+                                        </img>
+                                        <div className='cert-title'>
+                                            <b>CV</b>
+                                        </div>
+                                    </a>
+                                </div>
+                            </section>
                         </div>
                     </section>
                 ) : (
@@ -90,6 +102,18 @@ function Contact() {
                                     </a>
                                 </span>
                             </div>
+                            <p>Also if you need it, you can see my CV here.</p>
+                            <section className='certs-container '>
+                                <div className='cert' title='CV'>
+                                    <a href='./static/cv/cv.pdf' rel='noreferrer' target='_blank' title='CV'>
+                                        <img src='./static/images/cv/cv.png' alt='CV' >
+                                        </img>
+                                        <div className='cert-title'>
+                                            <b>CV</b>
+                                        </div>
+                                    </a>
+                                </div>
+                            </section>
                         </div>
                     </section>
                 )

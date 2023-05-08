@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 
-function Curriculum({ coursesPlatzi,
+function Resume({ coursesPlatzi,
     coursesSena,
     coursesFCC,
     coursesUdea,
@@ -24,12 +24,12 @@ function Curriculum({ coursesPlatzi,
                     {
                         pageLang === 'ES' ? (
                             <div>
-                                <h3>Curriculum</h3>
+                                <h3>Resume</h3>
                                 <p> Aqui puedes ver todos mis certificados, de las diferentes plataformas e instituciones en las que he estudiado. Además, si lo necesitas, puedes ver mi CV aquí.</p>
                                 <section className='certs-container '>
                                     <div className='cert' title='CV'>
-                                        <a href='./static/cv/cv-es.pdf' rel='noreferrer' target='_blank' title='CV'>
-                                            <img src='./static/images/cv/es.png' alt='CV' >
+                                        <a href='./static/cv/cv.pdf' rel='noreferrer' target='_blank' title='CV'>
+                                            <img src='./static/images/cv/cv.png' alt='CV' >
                                             </img>
                                             <div className='cert-title'>
                                                 <b>CV</b>
@@ -171,12 +171,12 @@ function Curriculum({ coursesPlatzi,
                             </div>
                         ) : (
                             <div>
-                                <h3>Curriculum</h3>
+                                <h3>Resume</h3>
                                 <p> You can here see all my certificates, from the different platforms and institutions where I have studied. Also if you need it, you can see my CV here.</p>
                                 <section className='certs-container '>
                                     <div className='cert' title='CV'>
-                                        <a href='./static/cv/cv-en.pdf' rel='noreferrer' target='_blank' title='CV'>
-                                            <img src='./static/images/cv/en.png' alt='CV' >
+                                        <a href='./static/cv/cv.pdf' rel='noreferrer' target='_blank' title='CV'>
+                                            <img src='./static/images/cv/cv.png' alt='CV' >
                                             </img>
                                             <div className='cert-title'>
                                                 <b>CV</b>
@@ -323,4 +323,4 @@ function Curriculum({ coursesPlatzi,
     );
 }
 
-export default Curriculum;
+export default Resume;
