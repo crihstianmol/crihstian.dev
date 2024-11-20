@@ -20,11 +20,11 @@ function Index() {
                             <img src='/static/images/profile-min-modified.png' width='200' height='200' alt='' />
                         </div>
                         <div className='about-reg'>
-                            <h1>Hola, soy Crihstian👋</h1>
+                            <h1>Hola Mundo👋</h1>
                             <h2>Dejame <span className='special-text'>presentarme...</span></h2>
-                            <p>Soy Crihstian Molina, Desarrollador de Software Colombiano.</p>
-                            <p>Actualmente trabajo en <a className='special-text' target='_blank' rel='noreferrer' href='https://n5now.com/'>N5 Now</a> como Desarrollador Full Stack.</p>
-                            <p>Me encanta la música, los videojuegos y el código.</p>
+                            <p>Soy Crihstian Molina, un Desarrollador de Software Colombiano.</p>
+                            <p>Actualmente trabajo como Freelancer en varios proyectos de Software a Medida. Para empresas en Colombia, Argentina y Estados Unidos.</p>
+                            <p>Me encanta la música, el café, los videojuegos y el código.</p>
                         </div>
                     </section>
                 ) : (
@@ -33,11 +33,11 @@ function Index() {
                             <img src='/static/images/profile-min-modified.png' width='200' height='200' alt='' />
                         </div>
                         <div className='about-reg'>
-                            <h1>Hi, I'm Crihstian👋</h1>
+                            <h1>Hello World👋</h1>
                             <h2>Let me introduce <span className='special-text'>myself...</span></h2>
                             <p>I'm Crihstian Molina, a Colombian Software Developer.</p>
-                            <p>I'm currently working at <a className='special-text' target='_blank' rel='noreferrer' href='https://n5now.com/'>N5 Now</a> as Full Stack Developer.</p>
-                            <p>I really love music, videogames and code.</p>
+                            <p>I am currently working as a Freelancer in several Custom Software projects. For companies in Colombia, Argentina and the United States.</p>
+                            <p>I really love music, coffe, videogames and code.</p>
                         </div>
                     </section>
                 )

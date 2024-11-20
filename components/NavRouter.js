@@ -151,7 +151,7 @@ function NavRouter({ children, headerprops = null }) {
                         <nav className="nav-bar">
                             <div className="nav">
                                 <div className="links">
-                                {
+                                    {
                                         headerprops.page == "Index" ? (
                                             <>
                                                 <a onClick={() => { changeRoute("/blog") }} _href="/blog">Blog</a>
@@ -214,22 +214,24 @@ function NavRouter({ children, headerprops = null }) {
                     </header>
                 )
             }
-            <main className="main mt-4 " >
-                {loader ? (<div className='load-container'>
-                    <div className='load-circle'></div>
-                </div>) : (children)}
-            </main>
-            {
-                pageLang === 'ES' ? (
-                    <div className="footer mt">
-                        <p style={{ "textAlign": "center" }}>Crihstian Molina © {new Date().getFullYear()}</p>
-                    </div>
-                ) : (
-                    <div className="footer mt">
-                        <p style={{ "textAlign": "center" }}>Crihstian Molina © {new Date().getFullYear()}</p>
-                    </div>
-                )
-            }
+            <div className='main-content'>
+                <main className="main mt-4 " >
+                    {loader ? (<div className='load-container'>
+                        <div className='load-circle'></div>
+                    </div>) : (children)}
+                </main>
+                {
+                    pageLang === 'ES' ? (
+                        <div className="footer mt">
+                            <p style={{ "textAlign": "center" }}>Crihstian Molina © {new Date().getFullYear()}</p>
+                        </div>
+                    ) : (
+                        <div className="footer mt">
+                            <p style={{ "textAlign": "center" }}>Crihstian Molina © {new Date().getFullYear()}</p>
+                        </div>
+                    )
+                }
+            </div>
             <script src="./static/js/getThumbs.js" data-pdfjs-src="./static/js/pdf.js"></script>
         </>
     );
